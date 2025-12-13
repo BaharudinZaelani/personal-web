@@ -1,8 +1,9 @@
-function App() {
+import image from "./assets/images/busy-cat.gif"
+function App () {
 
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center">
-      <img className="rounded-3xl shadow-2xl mb-3" src="/public/images/busy-cat.gif" />
+      <img className="rounded-3xl shadow-2xl mb-3" src={image} />
       <h1 className="text-6xl mb-4 font-bold">
         Halo Dunya !
       </h1>
