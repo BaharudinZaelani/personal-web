@@ -3,11 +3,13 @@ import image from "../assets/images/busy-cat.gif";
 
 // Motion components
 import { div as Div } from "motion/react-client";
+import Card from "../components/Card";
 
 const Home = () => {
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center">
+    <div className="w-full relative h-screen px-5 flex flex-col items-center justify-center">
       <Div
+        className="z-20"
         style={box}
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.8 }}
@@ -19,8 +21,12 @@ const Home = () => {
       >
         <img className="rounded-3xl shadow-2xl mb-3" src={image} />
       </Div>
-      <h1 className="text-6xl mb-4 font-bold">Halo Dunya !</h1>
-      <p>Website sedang dalam pengembangan . . . (～￣▽￣)～</p>
+      <div className="relative z-10 w-full justify-center flex text-center">
+        <Card>
+          <h1 className="text-6xl mb-4 font-bold">Halo Dunya</h1>
+          <p>Website sedang dalam pengembangan . . . (～￣▽￣)～</p>
+        </Card>
+      </div>
     </div>
   );
 };
