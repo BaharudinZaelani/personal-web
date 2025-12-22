@@ -1,5 +1,5 @@
 import { div as Div } from "motion/react-client";
-const Card = ({ children, className }) => {
+const AnimationCard = ({ children, className }) => {
   return (
     <Div
       className={className}
@@ -18,4 +18,4 @@ const Card = ({ children, className }) => {
     </Div>
   );
 };
-export default Card;
+export default AnimationCard;

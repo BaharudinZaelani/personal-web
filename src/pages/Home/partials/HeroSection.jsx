@@ -1,11 +1,9 @@
-import { box } from "../assets/css/home";
-import image from "../assets/images/busy-cat.gif";
-
-// Motion components
 import { div as Div } from "motion/react-client";
-import Card from "../components/Card";
+import { box } from "../../../assets/css/home";
+import image from "../../../assets/images/busy-cat.gif";
+import AnimationCard from "../../../components/AnimationCard";
 
-const Home = () => {
+const HeroSection = () => {
   return (
     <div className="w-full relative h-screen px-5 flex flex-col items-center justify-center">
       <Div
@@ -22,12 +20,12 @@ const Home = () => {
         <img className="rounded-3xl shadow-2xl mb-3" src={image} />
       </Div>
       <div className="relative z-10 w-full justify-center flex text-center">
-        <Card>
+        <AnimationCard>
           <h1 className="text-6xl mb-4 font-bold">Halo Dunya</h1>
           <p>Website sedang dalam pengembangan . . . (～￣▽￣)～</p>
-        </Card>
+        </AnimationCard>
       </div>
     </div>
   );
 };
-export default Home;
+export default HeroSection;

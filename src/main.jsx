@@ -4,7 +4,7 @@ import "./assets/css/style.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 // Pages
-import Home from "./pages/Home.jsx";
+import Home from "./pages/Home/Home.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
