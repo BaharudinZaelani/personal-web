@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import RotatingText from "../../components/ui/RotationText";
 import HeroSection from "./partials/HeroSection";
 
 const Home = () => {

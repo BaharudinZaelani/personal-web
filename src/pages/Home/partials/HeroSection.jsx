@@ -1,31 +1,26 @@
-import { useEffect, useRef } from "react";
 import AnimationCard from "../../../components/ui/AnimationCard";
 import "../assets/css/style.css";
-import Typed from "typed.js";
+import RotatingText from "../../../components/ui/RotationText";
 const HeroSection = () => {
-  const el = useRef(null);
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Front", "Back"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      delay: 1,
-      loop: true,
-      showCursor: false,
-    });
-
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
-    };
-  }, []);
   return (
     <div className="w-full h-screen flex flex-col items-center overflow-hidden">
       <div className="relative z-10 w-full h-full justify-center flex overflow-hidden text-center">
         <div className="gap-4 text-center h-full w-full flex flex-col items-center justify-center overflow-hidden">
           <AnimationCard delay={0.3}>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl text-center font-bold tracking-tight">
-              <span ref={el} /> End
+            <h1 className="text-6xl flex items-center md:text-7xl lg:text-8xl text-center font-bold tracking-tight">
+              <RotatingText
+                texts={["Front", "Back"]}
+                mainClassName="px-3 border-t border-b text-center w-47 md:w-80"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
+              />
+              <span>End</span>
             </h1>
           </AnimationCard>
           <AnimationCard delay={0.4} className="relative md:ms-32">
